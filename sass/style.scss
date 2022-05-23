@@ -1,42 +1,56 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
-body{
-    // background-color: rgb(70, 55, 55);
+.fundo{
+    background-image: url(../imagens/2223886-quadro-negro-branco-ou-quadro-negro-com-borracha-e-giz-para-fundo-textura-preta-para-adicionar-texto-ou-design-grafico-grátis-foto.jpg);
+    height: 100vh;
+    background-size: cover;
+    color: black;
+    font-size: 15px;
+    font-family: 'Dangrek', cursive;
+    text-align: center;
 }
 
 .calculadora{
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    min-height: 100vh;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: minmax(120px, auto)repeat(6, 100px);
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    padding: 15px;
+    color: white;
 }
 
-.resultado{
-    grid-column: 1/-1;
-    background-color: rgb(129, 123, 123);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-around;
-    padding: 10px;
-    word-wrap: break-word;
-    word-break: break-all;
+.botão{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: -webkit-grabbing;
+    margin: 3px;
+    background-color: rgb(31,31,31);  
+    border: none;
+    border-radius: 20px;
+    color: white;
 }
 
-.btn{
-    color: black;
-    background-color: rgb(90, 86, 86);
+.botão:hover{
+    background-color: black;
 }
 
-.btn-operadores{
-    background-color: aqua;
+#resultado{
+    width: 212px;
+    background-color: transparent;
+    height: 30px;
+    margin: 5px;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    text-align: right;
+    padding: 5px;
 }
 
-.btn-igual{
-background-color: rgb(45, 61, 61);
+img{
+    object-fit: cover;
 }

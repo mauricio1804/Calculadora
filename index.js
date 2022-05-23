@@ -1,39 +1,25 @@
-const resultado = document.querySelector(' .resultado ');
-const confirmar = document.querySelector(' .btn-igual ');
+//função para inserir números
+function insert(num){
+    var numero = document.getElementById('resultado').innerHTML
+    document.getElementById('resultado').innerHTML = numero + num
+}
 
-function inserir(valor){
-    resultado.innerHTML += valor;
-
-
+//função para limpar o campo
+function clean () {
+    document.getElementById('resultado').innerHTML = ""
 }
 
 
-function limparTudo() {
-    resultado.innerHTML = ' ';
+//função para apagar somente um número (o que está na última posição)
+function back(){
+    var resultado = document.getElementById('resultado').innerHTML
+    document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1)
 }
 
-
-function limpar() {
-    if(resultado.textContent){
-        let result = document.getElementById('resultado').innerHTML
-        resultado.innerHTML = result.substring(0, result.length - 1);
-    } 
-}
-
-
-function confirma() {
-    if(resultado.textContent != 'Erro') {
-        document.getElementById("resultado").innerHTML = eval(resultado.innerHTML)
+//função para calcular 
+function calcular(){
+    var resultado = document.getElementById('resultado').innerHTML
+    if(resultado){
+        document.getElementById('resultado').innerHTML = eval(resultado)
     }
-}
-
-function numNegativo(){
-    let result
-    let result2
-
-    result = valor * 2;
-
-    result2 = valor - resultado;
-
-    return result2
 }
