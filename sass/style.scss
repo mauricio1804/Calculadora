@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    // background-color: rgb(70, 55, 55);
+}
+
+.calculadora{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto)repeat(6, 100px);
+}
+
+.resultado{
+    grid-column: 1/-1;
+    background-color: rgb(129, 123, 123);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.btn{
+    color: black;
+    background-color: rgb(90, 86, 86);
+}
+
+.btn-operadores{
+    background-color: aqua;
+}
+
+.btn-igual{
+background-color: rgb(45, 61, 61);
+}
